@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ websiteLocale }}">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="{{ siteDescription }}">
+		<title>{{ siteTitle }}</title>
+
+        {% block headStyles %}{% endblock %}
+		{% block headScripts %}{% endblock %}
+
+	</head>
+
+	<body>
+
+		<main style="text-align: center">
+			{% block content %}{% endblock %}
+		</main>
+
+		<footer style="text-align: center">
+			&copy; {{ "now"|date("Y") }} Awesome Company s.r.o
+		</footer>
+
+        {% block footerStyles %}{% endblock %}
+        {% block footerScripts %}{% endblock %}
+
+	</body>
+</html>
