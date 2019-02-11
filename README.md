@@ -1,5 +1,12 @@
 <h1 align="center">
-Website Skeleton
+  Website Skeleton
+  <br>
+  <a href="https://github.com/Machy8/website-skeleton/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/Machy8/website-skeleton.svg?style=flat">
+  </a>
+  <a href="https://packagist.org/packages/machy8/website-skeleton">
+    <img src="https://img.shields.io/packagist/dt/Machy8/website-skeleton.svg?style=flat">
+  </a>
 </h1>
 🚀 Symfony/skeleton prepared for web development.
 
@@ -11,12 +18,12 @@ Website Skeleton
 
 ## Installation
 
-1. Install php packages
+1. Create project
 ```
-composer install
+composer create-project machy8/website-skeleton web
 ```
 
-2. Install npm modules
+2. Install NPM modules
 ```
 yarn install
 ```
