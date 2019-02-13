@@ -53,6 +53,7 @@
 		"phpstan:check": "phpstan analyse src tests --level max",
 
 		"auto-scripts": {
+			"assets:install %PUBLIC_DIR%": "symfony-cmd"
 		},
 		"post-install-cmd": [
 			"@auto-scripts"
