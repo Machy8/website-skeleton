@@ -17,6 +17,6 @@
 		"lint:fix": "eslint www/assets/front/js --fix",
 		"build:prod": "webpack",
 		"build:dev": "webpack --env.mode=development",
-		"dev": "webpack --watch --progress"
+		"dev": "webpack --watch --progress --env.mode=development"
 	}
 }
