@@ -1,6 +1,12 @@
 parameters:
     locale: 'en'
 
+    assets_dir: '%public_dir%/assets'
+    assets_front_dir: '%assets_dir%/front'
+    node_modules_dir: '%kernel.project_dir%/node_modules'
+    public_dir: '%kernel.project_dir%/public'
+    webtemp_dir: '%public_dir%/webtemp'
+
 services:
     _defaults:
         autowire: true
