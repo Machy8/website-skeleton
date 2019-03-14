@@ -1,0 +1,9 @@
+@mixin breakpoint($value, $type: 'min-width') {
+	@if ($type == 'max-width') {
+		$value: $value - 1;
+	}
+
+	@media ($type: $value) {
+		@content
+	}
+}
