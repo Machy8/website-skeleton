@@ -1,0 +1,29 @@
+xxx:
+    title: "Ooops..."
+    description: "Požadovanou stránku nelze nalézt. Zkontrolujte zadanou URL adresu."
+    homepageLink: Zpět na hlavní stránku
+"403":
+    title: Přístup zamítnut
+    description: "Nemáte oprávnění k zobrazení této stránky. Pokud se domníváte, že byste měli mít možnost zobrazit tuto stránku, zkuste kontaktovat správce webu."
+    homepageLink: Zpět na hlavní stránku
+    errorMessage: error 403
+"404":
+    title: Stránka nenalezena
+    description: "Požadovaná stránka nebyla nalezena. Je možné, že adresa je nesprávná nebo že stránka již neexistuje."
+    homepageLink: Zpět na hlavní stránku
+    errorMessage: error 404 
+"405":
+    title: Nepovolená metoda
+    description: "Požadovaná metoda požadavku není povolena pro zadanou URL."
+    homepageLink: Zpět na hlavní stránku
+    errorMessage: error 405  
+"410":
+    title: Stránka nenalezena
+    description: "Požadovaná stránka byla z webu odebrána. Omlouváme se za nepříjemnosti."
+    homepageLink: Zpět na hlavní stránku
+    errorMessage: error 410
+"500":
+    title: "Ooops..."
+    description: "Požadovanou stránku se nepodařilo načíst. Omlouváme se za nepříjemnosti."
+    homepageLink: Zpět na hlavní stránku
+    errorMessage: error 500

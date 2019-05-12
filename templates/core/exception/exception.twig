@@ -1,0 +1,7 @@
+{% extends 'core/abstract/layout.twig' %}
+
+{% block content %}
+	<div>
+		{% include 'core/exception/parts/' ~ exceptionCode ~ '.twig' %}
+	</div>
+{% endblock %}

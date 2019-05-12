@@ -1,0 +1,29 @@
+"xxx":
+    title: "Ooops..."
+    description: "The requested page couldn't be located. Checkout for any URL misspelling"
+    homepageLink: "Return to homepage"
+"403":
+    title: Access Denied
+    description: "Your browser sent a request that this server couYou do not have permission to view this page. Please try contact the website administrator if you believe you should be able to view this page."
+    homepageLink: Return to homepage
+    errorMessage: error 403
+"404":
+    title: Page Not Found
+    description: "The page you requested could not be found. It is possible that the address is incorrect, or that the page no longer exists. Please use a search engine to find what you are looking for."
+    homepageLink: Return to homepage
+    errorMessage: error 404 
+"405":
+    title: Method Not Allowed
+    description: "The requested method is not allowed for the URL."
+    homepageLink: Return to homepage
+    errorMessage: error 405  
+"410":
+    title: Page Not Found
+    description: "The page you requested has been taken off the site. We apologize for the inconvenience."
+    homepageLink: Return to homepage
+    errorMessage: error 410
+"500":
+    title: "Ooops..."
+    description: "The page you requested could not be loaded. We apologize for the inconvenience."
+    homepageLink: Return to homepage
+    errorMessage: error 500

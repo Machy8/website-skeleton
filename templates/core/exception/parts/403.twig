@@ -1,0 +1,11 @@
+{% trans_default_domain 'exceptions' %}
+
+<h1>{{ ('403.title')|trans }}</h1>
+<p>
+	{{ ('403.description')|trans }} 
+	<br>
+	<a href="{{ path('homepage') }}">
+		<strong>{{ ('403.homepageLink')|trans }}</strong>
+	</a>.
+</p>
+<p><small>{{ ('403.errorMessage')|trans }} </small></p>
