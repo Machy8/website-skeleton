@@ -1,8 +1,8 @@
 version: "3"
 services:
-    symfony-skeleton:
+    server:
         build: .
-        container_name: "logs-viewer"
+        container_name: "website-skeleton"
         working_dir: /var/www
         volumes:
             - ./:/var/www:delegated
