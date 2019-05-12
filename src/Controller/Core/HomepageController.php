@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Modules\CoreModule\FrontModule\Controllers;
+namespace App\Controller\Core;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,7 +16,7 @@ final class HomepageController extends AbstractController
 	 */
 	public function renderDefault(): Response
 	{
-		return $this->renderTemplate();
+		return $this->renderTemplate('core/homepage/default.twig');
 	}
 
 }

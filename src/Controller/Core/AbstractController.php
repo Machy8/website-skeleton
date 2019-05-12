@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Modules\CoreModule\FrontModule\Controllers;
+namespace App\Controller\Core;
 
 use Machy8\SmartController\SmartController;
 use WebLoader\Engine;
@@ -38,7 +38,7 @@ abstract class AbstractController extends SmartController
 		parent::beforeRender();
 		
 		$this->setTemplateParameters([
-			'layoutPath' => $this->getTemplatePath('layout', self::class),
+			'layoutPath' => 'core/abstract/layout.twig',
 			'siteDescription' => $this->getSiteDescription(),
 			'siteTitle' => $this->getSiteTitle(),
 			'webloaderFilesCollectionRender' => $this->webloader->getFilesCollectionRender(),
