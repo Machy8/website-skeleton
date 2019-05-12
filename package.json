@@ -15,7 +15,7 @@
 	"scripts": {
 		"lint:check": "eslint www/assets/front/js",
 		"lint:fix": "eslint www/assets/front/js --fix",
-		"build:prod": "webpack",
+		"build": "webpack",
 		"build:dev": "webpack --env.mode=development",
 		"dev": "webpack --watch --progress --env.mode=development"
 	}
