@@ -92,6 +92,12 @@
             "ref": "81dee417d2cc60cd1c9d6208dff2ec22a1103e93"
         }
     },
+    "illuminate/contracts": {
+        "version": "v5.8.15"
+    },
+    "illuminate/support": {
+        "version": "v5.8.15"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -115,6 +121,9 @@
     },
     "monolog/monolog": {
         "version": "1.24.0"
+    },
+    "nesbot/carbon": {
+        "version": "2.17.1"
     },
     "nette/bootstrap": {
         "version": "v2.4.6"
@@ -293,6 +302,9 @@
     "symfony/polyfill-intl-icu": {
         "version": "v1.10.0"
     },
+    "symfony/polyfill-intl-idn": {
+        "version": "v1.11.0"
+    },
     "symfony/polyfill-mbstring": {
         "version": "v1.10.0"
     },
@@ -408,9 +420,6 @@
         "version": "v5.4.2"
     },
     "symplify/package-builder": {
-        "version": "v5.4.2"
-    },
-    "symplify/token-runner": {
         "version": "v5.4.2"
     },
     "twig/extensions": {
