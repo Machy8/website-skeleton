@@ -5,16 +5,10 @@ declare(strict_types = 1);
 namespace App\Controller\Core;
 
 use Machy8\SmartController\SmartController;
-use WebLoader\Engine;
 
 
 abstract class AbstractController extends SmartController
 {
-
-	/**
-	 * @var Engine
-	 */
-	private $webloader;
 
 	/**
 	 * @var string
@@ -27,21 +21,14 @@ abstract class AbstractController extends SmartController
 	private $siteTitle = '';
 
 
-	public function __construct(Engine $engine)
-	{
-		$this->webloader = $engine;
-	}
-
-
 	public function beforeRender(): void
 	{
 		parent::beforeRender();
-		
+
 		$this->setTemplateParameters([
 			'layoutPath' => 'core/abstract/layout.twig',
 			'siteDescription' => $this->getSiteDescription(),
 			'siteTitle' => $this->getSiteTitle(),
-			'webloaderFilesCollectionRender' => $this->webloader->getFilesCollectionRender(),
 			'websiteLocale' => $this->getRequest()->getLocale()
 		]);
 	}

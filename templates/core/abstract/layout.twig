@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ websiteLocale }}">
 	<head>
-		
+
 		{% block headBegin %}{% endblock %}
-		
+
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="{{ siteDescription }}">
 		<title>{{ siteTitle }}</title>
 
+		{{ encore_entry_script_tags('layoutHeadEnd') }}
 		{% block headEnd %}{% endblock %}
 
 	</head>
 
 	<body class="{% block bodyClasses %}{% endblock %}">
-	
+
 		{% block bodyBegin %}{% endblock %}
 
 		<main style="text-align: center">
@@ -25,7 +26,7 @@
 			&copy; {{ "now"|date("Y") }} Awesome Company s.r.o
 		</footer>
 
-       
+		{# {{ encore_entry_script_tags('layoutBodyEnd') }} #}
 		{% block bodyEnd %}{% endblock %}
 
 	</body>
