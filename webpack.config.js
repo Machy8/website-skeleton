@@ -1,52 +1,48 @@
-let
-	miniCssExtractPlugin = require('mini-css-extract-plugin'),
+const
+	Encore = require('@symfony/webpack-encore'),
 
-	assetsDir = './public/assets',
-	assetsFrontDir = assetsDir + '/front',
-	assetsFrontSassDir = assetsFrontDir + '/sass',
-	outputDir = __dirname + '/public/webtemp';
+	assetsScssDir = './assets/scss',
+	assetsJsDir = './assets/js';
 
+Encore
+    // directory where compiled assets will be stored
+    .setOutputPath('public/build/')
+    // public path used by the web server to access the output path
+    .setPublicPath('/build')
+    // only needed for CDN's or sub-directory deploy
+    //.setManifestKeyPrefix('build/')
 
-module.exports = function (env) {
-	env = env || {};
+    /*
+     * ENTRY CONFIG
+     *
+     * Add 1 entry for each "page" of your app
+     * (including one that's included on every page - e.g. "app")
+     *
+     * Each entry will result in one JavaScript file (e.g. app.js)
+     * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
+     */
+	.addEntry('layoutHeadEnd', [
+		assetsScssDir + '/layout.scss'
+	])
+	//.addEntry('layoutBodyEnd', [])
 
-	return {
-		mode: env.mode || 'production',
-		devtool: '#eval-source-map',
-		performance: {hints: false},
-		plugins: [
-			new miniCssExtractPlugin({
-				filename: '_[name].css',
-				chunkFilename: '_[id].css'
-			})
-		],
-		output: {
-			path: outputDir,
-			publicPath: '/webtemp',
-			filename: '_[name].js'
-		},
-		module: {
-			rules: [
-				{
-					test: /\.(css|scss|sass)$/,
-					use: [
-						miniCssExtractPlugin.loader,
-						{loader: 'css-loader', options: {importLoaders: 1}},
-						{loader: 'postcss-loader', options: {plugins: () => [
-							require('autoprefixer'),
-							require('postcss-clean')
-						]}},
-						'sass-loader'
-					]
-				},
-				{
-					test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|webp)$/,
-					loader: 'file-loader'
-				}
-			]
-		},
-		entry: {
+    // will require an extra script tag for runtime.js
+    // but, you probably want this, unless you're building a single-page app
+    .enableSingleRuntimeChunk()
 
-		}
-	}
-};
+    .cleanupOutputBeforeBuild()
+    .enableSourceMaps(!Encore.isProduction())
+    // enables hashed filenames (e.g. app.abc123.css)
+    .enableVersioning(Encore.isProduction())
+
+    // uncomment if you use TypeScript
+    //.enableTypeScriptLoader()
+
+    // uncomment if you use Sass/SCSS files
+    .enableSassLoader()
+
+    // uncomment if you're having problems with a jQuery plugin
+    //.autoProvidejQuery()
+;
+
+module.exports = Encore.getWebpackConfig();
