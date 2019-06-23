@@ -1,0 +1,15 @@
+extends: stylelint-config-standard
+rules:
+    block-closing-brace-empty-line-before:
+    block-closing-brace-newline-after:
+    block-closing-brace-newline-before:
+    block-closing-brace-space-before:
+    block-opening-brace-newline-after:
+    block-opening-brace-space-after:
+    block-opening-brace-space-before:
+    color-hex-length: long
+    declaration-block-semicolon-newline-after:
+    declaration-block-semicolon-space-after:
+    declaration-block-semicolon-space-before:
+    declaration-block-trailing-semicolon:
+    indentation: tab

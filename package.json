@@ -10,14 +10,19 @@
 		"postcss-clean": "^1.1.0",
 		"postcss-loader": "^3.0.0",
 		"sass-loader": "^7.1.0",
+		"stylelint": "^10.1.0",
+		"stylelint-config-standard": "^18.3.0",
 		"webpack": "^4.29.3",
 		"webpack-cli": "^3.2.3"
 	},
 	"scripts": {
-		"lint:check": "eslint www/assets/front/js",
-		"lint:fix": "eslint www/assets/front/js --fix",
+		"lint:css:check": "stylelint assets/scss",
+		"lint:css:fix": "stylelint assets/scss --fix",
+		"lint:js:check": "eslint assets/js",
+		"lint:js:fix": "eslint assets/js --fix",
 		"prod": "encore prod",
 		"dev": "encore dev",
 		"watch": "encore dev --watch"
-	}
+	},
+	"dependencies": {}
 }
