@@ -1,0 +1,20 @@
+{% trans_default_domain 'layout' %}
+
+<meta property="og:type" content="website">
+{% if app.request.get('_route') %}
+	<meta property="og:url" content="{{ path(app.request.attributes.get('_route')) }}">
+{% endif %}
+<meta property="og:site_name" content="{{ ('social.twitter.site')|trans }}">
+<meta property="og:locale" content="{{ websiteLocale }}">
+<meta property="og:title" content="{{ siteTitle }}">
+<meta property="og:description" content="{{ siteDescription }}">
+<meta property="og:image" content="{{ url('homepage', {'_locale': websiteLocaleEn}) }}assets/images/logo.png">
+
+<meta property="twitter:card" content="summary_large_image">
+{% if app.request.get('_route') %}
+	<meta property="twitter:url" content="{{ path(app.request.attributes.get('_route')) }}">
+{% endif %}
+<meta property="twitter:site" content="{{ ('social.twitter.site')|trans }}">
+<meta property="twitter:title" content="{{ siteTitle }}">
+<meta property="twitter:description" content="{{ siteDescription }}">
+<meta property="twitter:image" content="{{ url('homepage', {'_locale': websiteLocaleEn}) }}assets/images/logo.png">

@@ -1,0 +1,33 @@
+{% trans_default_domain 'layout' %}
+
+{# https://developers.google.com/search/docs/data-types/corporate-contact #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ ('microdata.organization.name')|trans }}",
+  "url": "{{ url('homepage') }}",
+  "logo": "{{ url('homepage', {'_locale': websiteLocaleEn}) }}assets/images/logo.png",
+  "slogan": "{{ ('microdata.organization.slogan')|trans }}",
+  "description": "{{ ('microdata.organization.description')|trans }}",
+  "contactPoint": [
+    { "@type": "ContactPoint",
+      "telephone": "{{ ('microdata.organization.contact.phone')|trans }}",
+      "contactType": "customer service",
+      "availableLanguage": [
+        "Czech",
+        "English"
+      ]
+    }
+  ]{# ,
+  "sameAs": [
+    "{{ ('microdata.organization.social.fb')|trans }}",
+    "{{ ('microdata.organization.social.github')|trans }}",
+    "{{ ('microdata.organization.social.instagram')|trans }}",
+    "{{ ('microdata.organization.social.linkedin')|trans }}",
+    "{{ ('microdata.organization.social.medium')|trans }}",
+    "{{ ('microdata.organization.social.twitter')|trans }}",
+    "{{ ('microdata.organization.social.youtube')|trans }}"
+  ] #}
+}
+</script>
