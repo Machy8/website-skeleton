@@ -12,7 +12,10 @@ final class HomepageController extends AbstractController
 {
 
 	/**
-	 * @Route("/", name="homepage")
+	 * @Route({
+	 *     "cs-cz": "/cs-cz/",
+	 *     "en-us": "/"
+	 * }, name="homepage")
 	 */
 	public function renderDefault(): Response
 	{
