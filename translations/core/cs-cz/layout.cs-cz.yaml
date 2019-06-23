@@ -1,2 +1,23 @@
 footer:
     copyright: "Nejlepši firma s.r.o."
+
+microdata:
+    organization:
+        contact:
+            phone: ""
+        name: "Nejlepši firma s.r.o."
+        slogan: Firemní slogan
+        description: "Popis firmy."
+        social:
+            fb: ""
+            github: ""
+            instagram: ""
+            linkedin: ""
+            medium: ""
+            twitter: ""
+            youtube: ""
+
+social:
+    twitter:
+        site: ""
+    siteName: ""

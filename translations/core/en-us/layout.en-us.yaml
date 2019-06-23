@@ -1,2 +1,23 @@
 footer:
     copyright: "Awesome company s.r.o."
+
+microdata:
+    organization:
+        contact:
+            phone: ""
+        name: "Awesome company s.r.o."
+        slogan: "Company slogan"
+        description: "Commpany description"
+        social:
+            fb: ""
+            github: ""
+            instagram: ""
+            linkedin: ""
+            medium: ""
+            twitter: ""
+            youtube: ""
+
+social:
+    twitter:
+        site: ""
+    siteName: ""
