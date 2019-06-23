@@ -29,7 +29,9 @@ abstract class AbstractController extends SmartController
 			'layoutPath' => 'core/abstract/layout.twig',
 			'siteDescription' => $this->getSiteDescription(),
 			'siteTitle' => $this->getSiteTitle(),
-			'websiteLocale' => $this->getRequest()->getLocale()
+			'websiteLocale' => $this->getRequest()->getLocale(),
+			'websiteLocaleCs' => $this->getParameter('localeCs'),
+			'websiteLocaleEn' => $this->getParameter('localeEn')
 		]);
 	}
 
