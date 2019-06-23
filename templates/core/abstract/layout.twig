@@ -4,10 +4,14 @@
 
 		{% block headBegin %}{% endblock %}
 
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name=“robots“ content=“index, follow“>
 		<meta name="description" content="{{ siteDescription }}">
 		<title>{{ siteTitle }}</title>
+
+		{% include 'core/abstract/parts/microdata.twig' %}
+		{% include 'core/abstract/parts/social-meta-tags.twig' %}
 
 		{{ encore_entry_link_tags('layoutHeadEnd') }}
 		{% block headEnd %}{% endblock %}
