@@ -15,8 +15,7 @@
 - Prepared structure
 - Prepared commands in composer and package.json
 - Custom error controller
-- Installed [frontend](https://github.com/Machy8/website-skeleton/blob/master/package.json) and [backend]
-(https://github.com/Machy8/website-skeleton/blob/master/composer.json) packages one usually need for web development
+- Installed [frontend](https://github.com/Machy8/website-skeleton/blob/master/package.json) and [backend](https://github.com/Machy8/website-skeleton/blob/master/composer.json) packages one usually need for web development
 
 ## Installation
 
@@ -29,3 +28,11 @@ composer create-project machy8/website-skeleton web
 ```
 yarn install
 ```
+### If you use Docker
+1. Build the server image and start the server container
+```
+docker-compose build
+docker-compose up
+```
+
+2. Visit [http://localhost:85](http://localhost:85)
