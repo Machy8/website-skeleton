@@ -9,7 +9,7 @@
 		<meta name="description" content="{{ siteDescription }}">
 		<title>{{ siteTitle }}</title>
 
-		{{ encore_entry_script_tags('layoutHeadEnd') }}
+		{{ encore_entry_link_tags('layoutHeadEnd') }}
 		{% block headEnd %}{% endblock %}
 
 	</head>
@@ -22,9 +22,7 @@
 			{% block content %}{% endblock %}
 		</main>
 
-		<footer style="text-align: center">
-			&copy; {{ "now"|date("Y") }} Awesome Company s.r.o
-		</footer>
+		{% include 'core/abstract/parts/footer.twig' %}
 
 		{# {{ encore_entry_script_tags('layoutBodyEnd') }} #}
 		{% block bodyEnd %}{% endblock %}

@@ -1,5 +1,9 @@
 {% extends layoutPath %}
 
+{% trans_default_domain 'homepage' %}
+
 {% block content %}
-<h1>Hello World!</h1>
+    <h1>
+        {{ ('hello')|trans }}
+    </h1>
 {% endblock %}
