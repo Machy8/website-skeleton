@@ -19,20 +19,38 @@
 
 ## Installation
 
-1. Create project
+1. Install packages and project
 ```
 composer create-project machy8/website-skeleton web
-```
-
-2. Install NPM modules
-```
 yarn install
 ```
+
+2. Generate bundles
+```
+yarn dev
+```
+
 ### If you use Docker
-1. Build the server image and start the server container
+1. Clone project
+```
+git clone git@github.com:Machy8/website-skeleton.git myproject 
+```
+
+2. Build the server image and start the server container
 ```
 docker-compose build
 docker-compose up
 ```
 
-2. Visit [http://localhost:85](http://localhost:85)
+3. Install packages
+```
+docker-compose exec server composer install
+docker-compose exec server yarn install
+```
+
+4. Generate bundles
+```
+docker-compose exec server yarn dev
+```
+
+5. Visit [http://localhost:85](http://localhost:85)
