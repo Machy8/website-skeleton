@@ -5,3 +5,5 @@ includes:
 parameters:
 	symfony:
 		container_xml_path: '%rootDir%/../../../var/cache/dev/srcApp_KernelDevDebugContainer.xml'
+	ignoreErrors:
+		- '#Cannot call method getLocale() on Symfony\Component\HttpFoundation\Request|null.#'

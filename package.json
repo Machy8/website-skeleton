@@ -2,6 +2,7 @@
 	"devDependencies": {
 		"@symfony/webpack-encore": "^0.27.0",
 		"autoprefixer": "^9.4.7",
+		"babel-loader": "^8.0.6",
 		"css-loader": "^2.1.0",
 		"eslint": "^5.13.0",
 		"file-loader": "^3.0.1",
